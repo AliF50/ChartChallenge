@@ -9,27 +9,27 @@ app.controller('MainController', function($scope) {
         },
         backgroundColor: '#fff',
         plotarea: {
-            "margin-top": '50px', //positioning of graph itself
-            "margin-left": "20%"
+            marginTop: '50px', //positioning of graph itself
+            marginLeft: '20%'
         },
         legend: {
-            "layout": "6x1", //make it 6 rows by 1 column
-            "align": "left", //position of legend
-            "vertical-align": "top", //position of legend
-            "toggle-action": "hide", //hides series if clicked on
-            "highlight-plot": true, //highlights the series if mouse hovers over
+            layout: '6x1', //make it 6 rows by 1 column
+            align: 'left', //position of legend
+            verticalAlign: 'top', //position of legend
+            toggleAction: 'hide', //hides series if clicked on
+            highlightPlot: true, //highlights the series if mouse hovers over
         },
-        "scale-x": {
-            "min-value": new Date().getTime(),
-            step: "1250", //every x value will be 1250s
+        scaleX: {
+            minValue: new Date().getTime(),
+            step: '1250', //every x value will be 1250s
             transform: {
-                type: "date", //type of date
-                all: "%h:%i:%s" //format to be present in the x-axis
+                type: 'date', //type of date
+                all: '%h:%i:%s' //format to be present in the x-axis
             },
             item: {
-                "font-size": 9
+                fontSize: 9
             },
-            "max-items": 4 //display maximum 4 values on the x-axis
+            maxItems: 4 //display maximum 4 values on the x-axis
         },
         crosshairX: { //options for crosshair when user hovers over points in graph
             lineWidth: 4,
@@ -57,17 +57,17 @@ app.controller('MainController', function($scope) {
         },
         scaleY: {
             guide: {
-                "line-color": "black", //main guides every 20 units
-                "line-width": 2,
-                "line-style": "solid" //"solid", "dotted", "dashed", "dashdot"
+                lineColor: 'black', //main guides every 20 units
+                lineWidth: 2,
+                lineStyle: 'solid' //"solid", "dotted", "dashed", "dashdot"
             },
             values: '0:100:20', //go from 0 to 100, put a guide every 20 units
-            "minor-ticks": 3, //3 minor ticks between each guide
-            "minor-guide": { //styling of minor guides
-                "line-color": "grey",
-                "line-width": 1,
-                "line-style": "solid",
-                "alpha": 1
+            minorTicks: 3, //3 minor ticks between each guide
+            minorGuide: { //styling of minor guides
+                lineColor: 'grey',
+                lineWidth: 1,
+                lineStyle: 'solid',
+                alpha: 1
             }
         },
         tooltip: {
@@ -79,7 +79,7 @@ app.controller('MainController', function($scope) {
             transport: 'js',
             url: 'feed()',
             interval: 1250, //update every 1.25seconds
-            'adjust-scale': true, //make graph start from the left
+            adjustScale: true, //make graph start from the left
             resetTimeout: 1000 //used to create a flow of data and no refreshes, default is after 100 points, it refereshes
         },
         plot: { //properties of the plot function
@@ -90,8 +90,8 @@ app.controller('MainController', function($scope) {
             hoverState: { visible: false },
             marker: { visible: false },
             aspect: 'spline', //spline to make smooth curves
-            "highlight-state": {
-                "line-width": "10 px"
+            highlightState: {
+                lineWidth: '10px'
             },
         },
         series: [{ //all of the series data
