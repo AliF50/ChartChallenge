@@ -9,13 +9,17 @@
 </head>
 
 <body>
-    <div ng-controller="MainController">
-        <zingchart id="chart-1" zc-json="myConfig"></zingchart>
-        <div class="text-center">
-            <div class="btn-group">
-                <button type="button" class="btn btn-success" ng-click="startGraph()">Start</button>
-                <button type="button" class="btn btn-default" ng-click="stopGraph()">Stop</button>
-                <button type="button" class="btn btn-danger" ng-click="clearGraph()">Clear</button>
+    <div ng-controller="MainController" class="component">
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-4">
+                <zingchart id="chart-1" zc-json="myConfig"></zingchart>
+                <div class="text-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success" ng-click="startGraph()">Start</button>
+                        <button type="button" class="btn btn-default" ng-click="stopGraph()">Stop</button>
+                        <button type="button" class="btn btn-danger" ng-click="clearGraph()">Clear</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
